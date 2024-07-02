@@ -9,7 +9,7 @@ $numeros = [2,5,6,9];
 print_r($numeros);
 echo "<hr>";
 
-$alunos = array("João" =>18, "Maria" = 20, "Pedro" =>19);
+$alunos = array("João" =>18, "Maria" => 20, "Pedro" =>19);
 print_r($alunos);
 echo"<hr>";
 
@@ -37,7 +37,7 @@ echo "<hr>";
 $frutas[] = "abacaxi";
 print_r($frutas);
 $numeros[] = 93;
-$alunos["José" = 25];
+$alunos["José"] = 25;
 print_r($numeros);
 echo "<hr>";
 print_r($alunos);
@@ -45,26 +45,30 @@ echo "<hr>";
 
 //percorrendo pelos elementos
 echo "Listas de frutas:";
-foreach($frutas as $fruta){echo $fruta." ";}
+foreach($frutas as $fruta){echo $fruta. " ";
+}
 echo "<hr>";
 
-foreach($numeros as $numeros)//Escreva a lista de números
-{echo $numero." ";}
+foreach($numeros as $numero){//Escreva a lista de números
+echo $numero. " ";
+}
 echo "<hr>";
 
-foreach($alunos as $aluno);{
-    echo $aluno. " ";}
+foreach($alunos as $aluno){
+    echo $aluno. " ";
+}
 echo "<br>";
 echo "<hr>";
 
 foreach($alunos as $nome => $idade){
-    echo $nome . " tem " .$idade. " anos.<br>";}
+    echo $nome . " tem " .$idade. " anos.<br>";
+}
 echo "<br>";
 echo "<hr>";
 
 //Funções úteis para arrays
 echo "Numeros de elementos no array de fruta são: " . count($frutas). "<br>";
-echo "Índice de fruta 'Laranja':" .array_search("Laranja", "$frutas"). "<br>";
+echo "Índice de fruta 'Laranja':" .array_search("Laranja", $frutas). "<br>";
 
 echo "Última fruta do array: " . end($frutas) . "<br>";
 
